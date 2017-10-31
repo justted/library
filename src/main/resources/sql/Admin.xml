@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="ahpu.libra.dao.AdminDao">
+	<select id="findByName" parameterType="string" 
+	resultType="ahpu.libra.entity.Admin">
+		select * from admin where ad_name=#{ad_name}
+	</select>
+	
+	<update id="updateToken" parameterType="map">
+		update admin set work_num=#{adminToken} where ad_name=#{adminName}
+	</update>
+		
+</mapper>

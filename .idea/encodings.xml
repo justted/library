@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/main/java/ahpu/libra/dao/AdminDaoTest.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/ahpu/libra/dao/BookDao.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/ahpu/libra/dao/BookDaoTest.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/ahpu/libra/entity/NoteResult.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/ahpu/libra/service/impl/AdminServiceImpl.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/ahpu/libra/service/impl/BookServiceImpl.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/ahpu/libra/util/NoteUtil.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/ahpu/libra/web/controller/admin/AdminLoginController.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/ahpu/libra/web/controller/book/FindByBnameController.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/java/ahpu/libra/web/controller/admin/AdminLoginController.java" charset="GBK" />
+  </component>
+</project>

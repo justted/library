@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="ahpu.libra.dao.BookDao">
+	<select id="findAll" resultType="ahpu.libra.entity.Book">
+		select * from book order by id
+	</select>
+	
+	
+	<select id="findByBname" parameterType="string" 
+	resultType="ahpu.libra.entity.Book">
+		select * from book where bname like #{bname} order by id
+	</select>
+	
+	<select id="checkBookName" parameterType="string" 
+	resultType="ahpu.libra.entity.Book">
+		select * from book where bname=#{bname}
+	</select>
+	
+	<insert id="save" parameterType="ahpu.libra.entity.Book">
+		insert into book(bnum,bname,bwriter,bpublish,status,beizhu)
+		values(#{bnum},#{bname},#{bwriter},#{bpublish},#{status},#{beizhu})
+	</insert>
+	
+	<delete id="delete" parameterType="string">
+		delete from book where bnum=#{bnum}
+	</delete>
+	
+	<update id="modify" parameterType="ahpu.libra.entity.Book">
+		update book set bnum=#{bnum},bname=#{bname},bwriter=#{bwriter},
+			bpublish=#{bpublish},status=#{status},beizhu=#{beizhu}
+		where id=#{id}
+	</update>
+	
+	<select id="findByBnum" parameterType="string" 
+	resultType="ahpu.libra.entity.Book">
+		select * from book where bnum=#{bnum} order by id
+	</select>
+	
+</mapper>

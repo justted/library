@@ -1,0 +1,101 @@
+<html>
+	<head>
+		<title>图书管理</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script type="text/javascript" src="scripts/jquery.min.js"></script>
+		<script type="text/javascript" src="scripts/cookie_util.js"></script>
+		<script type="text/javascript" src="scripts/book.js"></script>
+		<script type="text/javascript" src="scripts/deletebook.js"></script>
+		<script type="text/javascript">
+				
+			var adminName = getCookie("adminName");
+			if(adminName===null){
+				window.location.href="login.html";
+			}
+			//登录执行以下操作
+			$(function(){
+				$("#admin_name").html(adminName);			
+				//加载图书列表
+				loadbooks();
+				
+				/*动态绑定删除按钮事件
+				$("#book_list").on("click","button",function(){					
+					//alert($(this).parent().parent().html());
+					var obj = $(this).parent().parent().children()[1];					
+					var $child = $(obj);
+					var bnum = $child.html();
+					alert("索书号为："+bnum);
+					//确认选择删除图书
+					var msg = confirm("是否删除该图书");
+				    if(msg==true){
+				    	deletebook(bnum);
+				    }else {
+				        alert("已取消删除");
+				    }
+				    
+					
+				});	*/	
+				//单击笔记本显示笔记列表--动态绑定
+				//$("#book_list").on("click","li",loadnotes);
+			});
+		</script>
+		
+	</head>
+	<body>
+		<div id="wrap">
+			<div id="top_content"> 
+				<div id="header">
+					<div id="rightheader"></div>
+					<div id="topheader">
+						<h1 id="title">
+							<a href="#">四川大学图书管理</a>
+						</h1>
+					</div>
+					<div id="navigation" align="right">
+						<span style="font-family: '微软雅黑';font-size:14px">
+							当前管理员:
+						</span>
+						<span id="admin_name" 
+							style="font-family: '微软雅黑';font-size:14px">
+						</span>
+					</div>
+				</div>
+				
+				<div id="content">
+					<p id="whereami">
+					</p>
+					<h1>
+						图书列表
+					</h1>
+					<p>
+						<input type="button" class="button" 
+							value="添加图书" onclick="location='AddBook.html'"/>
+					</p>
+					<table id="book_list" class="table">
+						<tr class="table_header">
+							<td>ID</td>
+							<td>索书号</td>
+							<td>图书名</td>
+							<td>作者</td>
+							<td>出版社</td>
+							<td>状态</td>
+							<td>备注</td>
+							<td>&nbsp;</td>
+						</tr>					
+											
+					</table>
+					<br>										
+				</div>
+			</div>
+			
+			<div id="footer" align="center">
+				<div id="footer_bg">
+					版权所有 © 四川大学高分子科学与工程学院   陈瑞<br>
+					四川省成都市一环路南一段24号    邮箱：chenrui_code@outlook.com  建议在1024*768下浏览
+				</div>
+			</div>
+			
+		</div>
+	</body>
+</html>

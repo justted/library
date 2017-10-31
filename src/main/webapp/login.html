@@ -1,0 +1,78 @@
+<html>
+	<head>
+		<title>图书管理</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script type="text/javascript" src="scripts/jquery.min.js"></script>
+		<script type="text/javascript" src="scripts/base64.js"></script>
+		<script type="text/javascript" src="scripts/cookie_util.js"></script>
+		<script type="text/javascript" src="scripts/login.js"></script>
+	</head>
+	<body>
+		<div id="wrap">
+			<div id="top_content"> 
+				<div id="header">
+					<div id="rightheader"></div>
+					<div id="topheader">
+						<h1 id="title">
+							<a href="#">四川大学图书管理</a>
+						</h1>
+					</div>
+					<div id="navigation">
+					</div>
+				</div>
+				
+				<div id="content">
+					<p id="whereami">
+					</p>
+					
+						<fieldset>
+							<legend id="leg">管理员登录</legend>
+								<table cellpadding="0" cellspacing="0" border="0"
+									class="form_table">
+									<tr>
+										<td valign="middle" align="right">
+											用户名:
+										</td>
+										<td valign="middle" align="left">
+											<input id="name" name="username"/>
+											<span id="name_msg"></span>
+										</td>
+									</tr>
+									<tr>
+										<td valign="middle" align="right">
+											密码:
+										</td>
+										<td valign="middle" align="left">
+											<input id="password" type="password" name="pwd"/>
+											<span id="password_msg"></span>
+										</td>
+									</tr>
+									<tr>
+										<td valign="middle" align="right">
+											验证码:
+										</td>
+										<td valign="middle" align="left">
+											<input name="number">
+											<!--  <image src="checkcode" style="cursor:pointer;" onclick="this.src='checkcode?'+Math.random();">-->
+											<span id="num_msg"></span>
+										</td>
+									</tr>							
+								</table>
+							<input type="button" id="login" value='&nbsp登&nbsp录&nbsp' />
+							
+						</fieldset>				
+				</div>
+			</div>
+			<br><br>
+			<div id="footer" align="center">
+				<div id="footer_bg">
+					版权所有 © 四川大学高分子科学与工程学院   陈瑞<br>
+					四川省成都市一环路南一段24号    邮箱：chenrui_code@outlook.com  建议在1024*768下浏览
+				</div>
+			</div>
+			
+		</div>
+
+	</body>
+</html>

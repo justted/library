@@ -1,0 +1,131 @@
+<html>
+	<head>
+		<title>图书信息修改</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script type="text/javascript" src="scripts/jquery.min.js"></script>
+		<script type="text/javascript" src="scripts/cookie_util.js"></script>
+		<script type="text/javascript" src="scripts/updatebook.js"></script>
+		<script type="text/javascript" src="scripts/findByBnum.js"></script>
+		<script type="text/javascript">
+			var adminName = getCookie("adminName");
+			var bnum = getCookie("bnum");
+			$(function(){
+				$("#admin_name").html(adminName);
+				findByBnum(bnum);
+				updatebook(bnum);
+				$("#back").click(function(){
+					window.location.href="listBook.html";
+				});
+			});		
+			
+			
+		</script>
+		
+		
+	</head>
+	<body>
+		<div id="wrap">
+			<div id="top_content"> 
+				<div id="header">
+					<div id="rightheader"></div>
+					<div id="topheader">
+						<h1 id="title">
+							<a href="#">四川大学图书管理</a>
+						</h1>
+					</div>
+					<div id="navigation" align="right">
+						<span style="font-family: '微软雅黑';font-size:14px">
+							当前管理员:
+						</span>
+						<span id="admin_name" 
+							style="font-family: '微软雅黑';font-size:14px">
+						</span>
+					</div>
+				</div>
+				
+				<div id="content">
+					<p id="whereami">
+					</p>
+					<h1>
+						修改图书信息:
+					</h1>
+					
+					<table cellpadding="0" cellspacing="0" border="0"
+							class="form_table">
+							
+							<tr>
+								<td valign="middle" align="right">
+									id:
+								</td>
+								<td  valign="middle" align="left">
+									<span id="id"></span>
+								</td>
+							</tr>
+							<tr>
+								<td valign="middle" align="right">
+									索书号:
+								</td>
+								<td valign="middle" align="left">
+									<input type="text" class="inputgri" id="bnum" />
+								</td>
+							</tr>
+							<tr>
+								<td valign="middle" align="right">
+									书名:
+								</td>
+								<td valign="middle" align="left">
+									<input type="text" class="inputgri" id="bname" />
+								</td>
+							</tr>
+							<tr>
+								<td valign="middle" align="right">
+									作者:
+								</td>
+								<td valign="middle" align="left">
+									<input type="text" class="inputgri" id="bwriter" />
+								</td>
+							</tr>
+							<tr>
+								<td valign="middle" align="right">
+									出版社:
+								</td>
+								<td valign="middle" align="left">
+									<input type="text" class="inputgri" id="bpublish" />
+								</td>
+							</tr>
+							<tr>
+								<td valign="middle" align="right">
+									状态:
+								</td>
+								<td valign="middle" align="left">
+									<input type="text" class="inputgri" id="status" />
+								</td>
+							</tr>
+							<tr>
+								<td valign="middle" align="right">
+									备注:
+								</td>
+								<td valign="middle" align="left">
+									<input type="text" class="inputgri" id="beizhu" />
+								</td>
+							</tr>
+						</table>
+										
+					<p>
+						<input type="button" id="updatebook" class="button" value="提交" />
+						<input type="button" id="back" class="button" value="取消" />
+					</p>															
+				</div>
+			</div>
+			
+			<div id="footer" align="center">
+				<div id="footer_bg">
+					版权所有 © 四川大学高分子科学与工程学院   陈瑞<br>
+					四川省成都市一环路南一段24号    邮箱：chenrui_code@outlook.com  建议在1024*768下浏览
+				</div>
+			</div>
+			
+		</div>
+	</body>
+</html>
