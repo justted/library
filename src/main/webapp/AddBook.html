@@ -42,7 +42,7 @@
 							dataType:"json",
 							success:function(result){
 								//解析返回的JSON结果
-								if(result.status==0){//成功
+								if(result.status===0){//成功
 									alert(result.msg);
 									window.location.href="listBook.html";						
 								}else {
